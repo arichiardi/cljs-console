@@ -43,6 +43,15 @@ interpolated form or expression is delimited by a control character followed by
 | `@`  | `%O`   | looks like big-O    | `"status: @{some-js-obj}"` |
 | `^`  | `%c`   | nobody uses this    | `"^{css-format}hi there"`  |
 
+#### Simple example
+
+```
+(let [x [:please :write "me"]
+      y {:together {:with "this"}}]
+  (log/info "~{x}")
+  (log/debug "~{x}~{y}")) ;; note the outputted newline here
+```
+
 ### Logging
 
 ```clojure
